@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>   
-
-    <p>Visita mi blog <a href="{% url 'blog:home' %}">aquí</a>.</p>
-
+<body>
+        <h2><i>Detalle de Contenido</i></h2>
+        {{post.title}}
+        <br>
+        {{post.content}}
+        
 </body>
 </html>

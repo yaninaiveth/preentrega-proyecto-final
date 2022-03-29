@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+{% block loquecambia %}
+    <form method="POST">
+        {%csrf_token%}
+        Nombre {{form.nombre}}
+        <br>
+        Email {{form.email}}
+        <br>
+        Teléfono {{form.telefono}}
+        <br>
+        Asunto {{form.asunto}}
+        <br>
+        Mensaje {{form.mensaje}}
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <a href="{% url 'inicio' %}">volver al inicio</a>
+{% endblock %}
+
+
+

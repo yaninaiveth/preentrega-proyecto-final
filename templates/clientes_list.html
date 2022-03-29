@@ -1,0 +1,12 @@
+{% extends "padre.html" %}  
+{% block loquecambia %}      
+        <h3>LISTADO DE CLIENTES</h3>
+                
+        {% for c in clientes %}
+
+                <li>{{c}}</li>  
+
+        {% endfor %}
+
+        <a href="{% url 'inicio' %}">volver al inicio</a>
+{% endblock %}

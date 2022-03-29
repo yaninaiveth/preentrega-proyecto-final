@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+{% block loquecambia %}
+    <h3>LISTADO DE PROUCTOS</h3>
+    <br>
+    <a href="{%url 'app:buscar_producto'%}"><i>buscar artículo</i></a>
+    <br>
+    <br>
+    {%for p in productos%}
+        Artículo: {{p.articulo}}  <!-- muestra artículo de nuestros productos-->
+        <br>
+        Precio: ${{p.precio_unitario}}  <!-- muestra precio unit. de nuestros productos-->
+        <a href="{%url 'app:modificar_producto' p.id %}">modificar</a>
+        <a href="{%url 'app:borrar_producto' p.id %}">borrar</a>
+        <br>
+        <br>
+    {%endfor%}
+    <br>
+    <a href="{%url 'app:crear_producto'%}"><i>crear nuevo producto</i></a>
+    </p>
+
+    <a href="{% url 'inicio' %}">volver al inicio</a>
+{% endblock %}

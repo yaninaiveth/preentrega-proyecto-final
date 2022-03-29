@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+{% block loquecambia %}
+    <p>Has buscado: <strong>{{query}}</strong></p>
+
+    {% if productos%}
+
+    <p>Productos encontrados: {{productos|length}} productos</p>
+    <ul>
+        {% for producto in productos %}
+        <li>
+            {{producto.articulo}}
+            {{producto.precio_unitario}}
+            <br>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+
+    <p>El producto buscado no se encuentra.</p>
+    {% endif %}
+{% endblock}

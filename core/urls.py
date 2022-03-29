@@ -19,6 +19,6 @@ from .views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',HomeView.as_view(),name="home"),                # llamamos nuestra página de inicio
-    path('blog/',include('blog.urls',namespace='blog')),    # llamamos/incluimos las urls generadas en la app "blog"
+    path('',HomeView,name="inicio"),                # llamamos nuestra página de inicio
+    path('app/',include('app.urls')),
 ]

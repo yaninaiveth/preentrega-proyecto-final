@@ -1,9 +1,8 @@
+from urllib import request
 from django.shortcuts import render
-from django.views.generic import View
 
-# vista de Clase - Inicio de nuestro página/blog
-class HomeView(View):
-    def get(self,request,*args,**kwargs):
+# vista de funcón (def) - Vista de Inicio de nuestro página/blog
+def HomeView(request):
         context = {
 
         }

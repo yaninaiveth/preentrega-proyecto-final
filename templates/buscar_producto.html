@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+{% block loquecambia %}
+    <h3>BUSQUEDA</h3>
+        
+        <form action="/app/producto_buscado/" method="GET">
+
+            <input type="text" name="articulo">
+
+            <input type="submit" value="buscar">
+
+        </form>
+
+        <a href="{% url 'app:productos' %}">volver a productos</a>
+{% endblock %}

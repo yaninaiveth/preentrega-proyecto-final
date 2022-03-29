@@ -1,5 +1,6 @@
-{% extends "padre.html"}
-{% block loquecambia}
+{% extends "padre.html" %
+}
+{% block loquecambia %}
     <form method="POST">
         {%csrf_token%}
         artículo: {{form.articulo}}
@@ -14,4 +15,4 @@
     </form>
 
     <a href="{% url 'app:productos' %}">atrás</a>
-{ % endblock %}
+{% endblock %}

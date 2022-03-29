@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Navigation-->
-    <nav class="navbar navbar-light bg-light static-top">
-        <div class="container">
-            <a href="{% url 'app:productos' %}">Productos</a>
-            <a href="{% url 'app:clientes' %}">Clientes</a>
-            <a href="{% url 'app:contacto' %}">Contacto</a>
-        </div>
-    </nav>
+    <header>        
+        <!--Navigation-->
+        <nav class="navbar static-top nav">
+
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'app:productos' %}">Productos</a></li>
+                <li><a href="{% url 'app:clientes' %}">Clientes</a></li>
+                <li><a href="{% url 'app:contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
 </body>
 </html>

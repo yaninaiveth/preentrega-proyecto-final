@@ -32,7 +32,7 @@ _Link de repositorio_:
 
 1. Instalación:
     * _**Clonar repositorio**_ en alguna carpeta.
-    * 
+    
 2. Ejecución:
     * Iniciar servidor:
 

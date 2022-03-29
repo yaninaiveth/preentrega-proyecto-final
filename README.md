@@ -21,10 +21,11 @@ _Link de repositorio_:
 ---
 
 ### _Technologies_:
-* Python
-* Django
+* Python 
+* Django (v.4.0.1)
 * Html
 * Css
+* Fontawesome (v.6)
 
 ---
 
@@ -41,6 +42,6 @@ _Link de repositorio_:
 3. Navegando por la app
     * La aplicación se inicia en el "home". Desde allí podemos navegar hacia:
 
-        - Productos: allí vemos listado de productos (además podemos modificar/borrar productos existentes, así como también crear un nuevo producto).
-        - Clientes: vemos el listado de clientes
+        - Productos: allí vemos listado de productos (además podemos modificar/borrar productos existentes, así como      también crear un nuevo producto).
+        - Clientes: vemos el listado de clientes.
         - Contacto: donde podemos enviar un mensaje a la tienda (completando formulario que se guarda en la BBDD).

@@ -1,4 +1,28 @@
 {% extends "padre.html" %}
+{% load static %}
 {% block loquecambia %}
-    <h1>Bienvenido a mi tienda</h1>
+    <h1 style="text-align: center;">
+        Bienvenidos a nuestra tienda</h1>
+    
+    <h2 style="text-align: center;color: #B7D164;">
+        Somos lambda3d</h2>
+
+    <div class="imagen_logo" style="margin-top: 1.5rem;">
+        <img src="{% static 'images/logo_lambda.png' %}" alt="logo">
+    </div>
+    
+    <div class="txt_nosotros" style="    font-size: larger; display: block; margin-top: 2rem; text-align: center;">
+        <p>Una empresa apasionada por el mundo de la impresión 3D.</p>
+        <br>
+        <p>La impresión 3D es la nueva forma de manufactura que expande los límites
+            de la producción de piezas.</p>
+        <br>
+        <p>El diseño 3D es nuestra herramienta para transformar tus ideas, 
+            y convertirlas en ese objeto que buscas.
+        </p>
+        <br>
+        <p>¿Qué esperás para contactarnos?
+        </p>
+
+    </div>
 {% endblock %}

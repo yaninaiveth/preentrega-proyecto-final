@@ -5,18 +5,22 @@
     <a href="{%url 'app:buscar_producto'%}"><i>buscar artículo</i></a>
     <br>
     <br>
+    <p style="text-align: left;">
     {%for p in productos%}
         Artículo: {{p.articulo}}  <!-- muestra artículo de nuestros productos-->
         <br>
+        Sección: {{p.seccion}}  <!-- muestra sección de nuestros productos-->
+        <br>
+        Descripción: {{p.descripcion}}  <!-- muestra descripción de nuestros productos-->
+        <br>
         Precio: ${{p.precio_unitario}}  <!-- muestra precio unit. de nuestros productos-->
-        <a href="{%url 'app:modificar_producto' p.id %}">modificar</a>
-        <a href="{%url 'app:borrar_producto' p.id %}">borrar</a>
+        <a style="margin-left: 0.4rem;" href="{%url 'app:modificar_producto' p.id %}">modificar</a>
+        <a style="margin-left: 0.4rem;" href="{%url 'app:borrar_producto' p.id %}">borrar</a>
         <br>
         <br>
     {%endfor%}
+    </p>
     <br>
     <a href="{%url 'app:crear_producto'%}"><i>crear nuevo producto</i></a>
-    </p>
 
-    <a href="{% url 'inicio' %}">volver al inicio</a>
 {% endblock %}

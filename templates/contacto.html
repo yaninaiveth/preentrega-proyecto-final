@@ -1,6 +1,8 @@
 {% extends "padre.html" %}
 {% block loquecambia %}
-    <form method="POST">
+
+<br>
+    <form style="margin-top: 2rem;" method="POST">
         {%csrf_token%}
         Nombre {{form.nombre}}
         <br>
@@ -15,7 +17,6 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <a href="{% url 'inicio' %}">volver al inicio</a>
 {% endblock %}
 
 

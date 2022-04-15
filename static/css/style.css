@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+body{
+    background-image: url(../images/bg2.png);
+}
+
+/* Estilos títulos */
+
+h1{
+    text-align: center;
+}
+
+.title-productList{
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+/* Estilos botones */
+
+.bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Inicio estilo barra de navegación */
+
+.background{
+    background-color: #B7D164;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* Inicio estilo del archivo index.html */
+
+.index{
+    display: grid;
+    grid-template-columns: 40% 58%;
+    grid-template-rows: repeat(3, 30%);
+    grid-template-areas:
+                        "slider title"
+                        "slider text"
+                        "slider text";
+}
+
+.text{
+    grid-area: title;
+    margin-top: 1em;
+}
+
+.txt_nosotros{
+    grid-area: text;
+    padding: 3em;
+}
+
+#carouselExampleSlidesOnly{
+    grid-area: slider;
+}
+
+/* Mediaquerie slider y texto index */
+
+@media screen and (max-width: 1000px) {
+    .index{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 30%);
+        grid-template-areas:
+                        "title"
+                        "text"
+                        "slider";
+
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+}
+
+
+/* Inicio estilo archivo productos.html */
+
+.list-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-image{
+    height: 20em;
+}
+
+.container-image img{
+    object-fit: cover;
+}
+

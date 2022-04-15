@@ -1,7 +1,7 @@
 {% extends "padre.html" %}
 {% block loquecambia %}
-    <form method="POST">
-        {%csrf_token%}
+    <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}       
         artículo: {{form.articulo}}
         <br>
         sección: {{form.seccion}}
@@ -9,6 +9,8 @@
         descripción: {{form.descripcion}}
         <br>
         precio: {{form.precio_unitario}}
+        <br>
+        foto: {{form.imagen}}
         <br>
         <button type="submit">crear</button>
     </form>

@@ -21,6 +21,7 @@ class Producto(models.Model):
     seccion = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=100)
     precio_unitario = models.IntegerField()
+    imagen = models.ImageField(null=True,blank=True)
 
     def __str__(self) -> str:
         return f'Artículo: {self.articulo} | Sección: {self.seccion} | P.unit.: ${self.precio_unitario}'

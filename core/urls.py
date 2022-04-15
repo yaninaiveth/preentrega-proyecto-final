@@ -15,10 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+# VISTAS LOGIN_REQUEST Y REGISTER AGREGAR EN VERSION FINAL!!
 from .views import HomeView
+
+# AGREGADOS PARA VER IMAGENS EN NUESTRAS WEB!!
+from django.conf import settings
+from django.conf.urls.static import static
+
+# AGREGADA PARA EL LOGOUT
+from django.contrib.auth.views import LogoutView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',HomeView,name="inicio"),                # llamamos nuestra página de inicio
-    path('app/',include('app.urls')),
+    path('app/',include('app.urls')), 
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

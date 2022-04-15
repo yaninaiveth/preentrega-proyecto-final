@@ -1,28 +1,52 @@
 {% extends "padre.html" %}
 {% load static %}
 {% block loquecambia %}
-    <h1 style="text-align: center;">
-        Bienvenidos a nuestra tienda</h1>
-    
-    <h2 style="text-align: center;color: #B7D164;">
-        Somos lambda3d</h2>
 
-    <div class="imagen_logo" style="margin-top: 1.5rem;">
-        <img src="{% static 'images/logo_lambda.png' %}" alt="logo">
+<div class="index">
+
+    <div class="text">
+        <h1 style="text-align: center;">Bienvenidos a nuestra tienda</h1>
+        <h2 style="text-align: center; color: #B7D164;">Somos Lambda 3D</h2>
     </div>
     
-    <div class="txt_nosotros" style="    font-size: larger; display: block; margin-top: 2rem; text-align: center;">
-        <p>Una empresa apasionada por el mundo de la impresión 3D.</p>
+    <div class="txt_nosotros" style="font-size: medium; display: block; margin: 0.1rem 0rem; text-align: center;">
+        <p>
+            Una empresa apasionada por el mundo de la impresión 3D.
+        </p>
         <br>
         <p>La impresión 3D es la nueva forma de manufactura que expande los límites
-            de la producción de piezas.</p>
+            de la producción de piezas.
+        </p>
         <br>
-        <p>El diseño 3D es nuestra herramienta para transformar tus ideas, 
+        <p>
+            El diseño 3D es nuestra herramienta para transformar tus ideas, 
             y convertirlas en ese objeto que buscas.
         </p>
         <br>
-        <p>¿Qué esperás para contactarnos?
+        <p>
+            ¿Qué esperás para contactarnos?
         </p>
-
     </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/astro.PNG' %}" class="d-block w-100" alt="Lámpara astronauta">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/rocket.PNG' %}" class="d-block w-100" alt="Rocket">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/babyyoda.PNG' %}" class="d-block w-100" alt="Baby Yoda">
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+crossorigin="anonymous"></script>
+
 {% endblock %}

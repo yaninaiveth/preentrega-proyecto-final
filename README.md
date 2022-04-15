@@ -35,6 +35,7 @@ _Link de repositorio_:
     * _**Clonar repositorio**_ en alguna carpeta.
     
 2. Ejecución:
+    * Instalar requirements.txt
     * Iniciar servidor:
 
         _Ubicarse en carpeta de proyecto (terminal) y ejecutar **"python manage.py runsever"**_
@@ -42,6 +43,8 @@ _Link de repositorio_:
 3. Navegando por la app
     * La aplicación se inicia en el "home". Desde allí podemos navegar hacia:
 
-        - Productos: allí vemos listado de productos (además podemos modificar/borrar productos existentes, así como      también crear un nuevo producto).
-        - Clientes: vemos el listado de clientes.
-        - Contacto: donde podemos enviar un mensaje a la tienda (completando formulario que se guarda en la BBDD).
+        - Nosotros: información (estilo "about us" de la tienda.)
+        - Productos: allí vemos listado de productos (allí podemos modificar/borrar productos existentes, así como también crear nuevo producto).
+        - Clientes: vemos el listado de clientes (estos se generan desde admin/django).
+        - Contacto: aquí podemos enviar mensaje a la tienda (completando el formulario, este se guarda en la BBDD).
+

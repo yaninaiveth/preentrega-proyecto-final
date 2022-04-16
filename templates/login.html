@@ -1,19 +1,19 @@
 {% extends "padre.html" %}
 
 {% block loquecambia %}
-<body>
-    <form action="" method="POST">
+<div class="form">
+    <form class="login" action="" method="POST">
         {% csrf_token %}
 
         {{form.as_p}}
 
-        <button type="submit"> iniciar sesión</button>
-
+        <button type="submit" class="btn btn-success">Iniciar sesión</button>
+        
         <br>
         <div>
-            <a href="{% url 'app:registro' %}" style="text-decoration: none; font-family: 'Hind Siliguri', sans-serif; color: #698901;"> No tienes cuenta? Registrate!</a>
+            <a href="{% url 'app:registro' %}" style="text-decoration: none; font-family: 'Hind Siliguri', sans-serif; color: #698901;"> ¿No tienes cuenta? ¡Registrate!</a>
         </div>
 
     </form>
-</body>
+</div>
 {% endblock %}

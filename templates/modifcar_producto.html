@@ -1,17 +1,18 @@
 {% extends "padre.html" %}
 {% block loquecambia %}
-    <form method="POST" enctype="multipart/form-data">
+    <form class="form" method="POST" enctype="multipart/form-data">
         {%csrf_token%}
-        artículo: {{form.articulo}}
+        Artículo: {{form.articulo}}
         <br>
-        sección: {{form.seccion}}
+        Sección: {{form.seccion}}
         <br>
-        descripción: {{form.descripcion}}
+        Descripción: {{form.descripcion}}
         <br>
-        precio: {{form.precio_unitario}}
+        Precio: {{form.precio_unitario}}
         <br>
-        foto: {{form.imagen}}
+        Foto: {{form.imagen}}
         <br>
-        <button type="submit">modificar</button>
+        <button type="submit" class="btn btn-success bot-prod crear">Modificar</button>
+        <button type="submit" class="btn btn-success bot-prod crear"><a href="{% url 'app:productos' %}" style="color: white; text-decoration: none">Volver atrás</a></button>
     </form>
 {% endblock %}

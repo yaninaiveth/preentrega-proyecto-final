@@ -1,8 +1,8 @@
 {% extends "padre.html" %}
 {% block loquecambia %}
 
-<br>
-    <form style="margin-top: 2rem;" method="POST">
+<div class="form-contacto">
+    <form class="contacto" style="margin-top: 2rem;" method="POST">
         {%csrf_token%}
         Nombre {{form.nombre}}
         <br>
@@ -14,8 +14,9 @@
         <br>
         Mensaje {{form.mensaje}}
         <br>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-success">Enviar</button>
     </form>
+</div>
 
 {% endblock %}
 

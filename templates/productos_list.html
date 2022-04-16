@@ -4,8 +4,8 @@
     <h2 class="title-productList">LISTADO DE PRODUCTOS</h2>
 
     <div class="bot">
-        <button type="submit" class="btn"><a href="{%url 'app:crear_producto'%}">Crear nuevo producto</a></button>
-        <button class="btn"><a href="{%url 'app:buscar_producto'%}">Buscar artículo</a></button>
+        <button type="button" class="btn btn-success bot-prod"><a style="color: white; text-decoration: none" href="{%url 'app:crear_producto'%}">Crear nuevo producto</a></button>
+        <button type="button" class="btn btn-success bot-prod"><a style="color: white; text-decoration: none" href="{%url 'app:buscar_producto'%}">Buscar artículo</a></button>
     </div>
     
     <p style="text-align: left;">
@@ -18,15 +18,15 @@
                     <img src="{{p.imagen.url}}" class="card-img-top" alt="{{p.articulo}}">
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Artículo: {{p.articulo}} </li>
-                    <li class="list-group-item">Sección: {{p.seccion}} </li>
-                    <li class="list-group-item">Descripción: {{p.descripcion}}</li>
-                    <li class="list-group-item">Precio: ${{p.precio_unitario}}</li>
+                    <li class="list-group-item"><p><b>Artículo:</b></p>{{p.articulo}} </li>
+                    <li class="list-group-item"><p><b>Sección:</b></p>{{p.seccion}} </li>
+                    <li class="list-group-item"><p><b>Descripción:</b></p>{{p.descripcion}}</li>
+                    <li class="list-group-item"><p><b>Precio:</b></p> ${{p.precio_unitario}}</li>
                 </ul>
     
                 <div class="card-body">
-                    <a href="{%url 'app:modificar_producto' p.id %}" class="card-link">Modificar</a>
-                    <a href="{%url 'app:borrar_producto' p.id %}" class="card-link">Eliminar</a>
+                    <button type="button" class="btn btn-success"><a style="color: white; text-decoration: none" href="{%url 'app:modificar_producto' p.id %}" class="card-link">Modificar</a></button>
+                    <button type="button" class="btn btn-success"><a style="color: white; text-decoration: none" href="{%url 'app:borrar_producto' p.id %}" class="card-link">Eliminar</a></button>
                 </div>
                 
             </div>

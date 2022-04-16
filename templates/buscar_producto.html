@@ -1,8 +1,8 @@
 {% extends "padre.html" %}
 {% block loquecambia %}
-    <h3>BUSQUEDA</h3>
+    <h3>BÚSQUEDA</h3>
         
-        <form action="/app/producto_buscado/" method="GET">
+        <form class="form" action="/app/producto_buscado/" method="GET">
 
             <input type="text" name="articulo">
 
@@ -10,5 +10,5 @@
 
         </form>
 
-        <a href="{% url 'app:productos' %}">volver a productos</a>
+        <a href="{% url 'app:productos' %}">Volver a productos</a>
 {% endblock %}

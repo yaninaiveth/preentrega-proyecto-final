@@ -1,2 +1,3 @@
-fontawesome==6
-Pillow
+fontawesomefree==6.0.0
+Pillow==8.4.0
+django_crispy_forms==1.14.0

@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+{% load crispy_forms_tags %}
+{% block loquecambia %}
+<body>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="col-4">
+        {{form|crispy}}
+        </div>
+    
+    <button class="btn btn-success" type="submit" style="padding: 5px; margin-left: 0.8rem; border-radius: 5px;"> Guardar</button>
+    </form>
+    <br>
+    <button class="btn btn-success" style="margin-left: 10px;"><a href="{% url 'inicio' %}" style= "padding:5px; text-decoration: none; color: white;">atrás</a></button>
+    <br>
+    <br>
+</body>
+{% endblock %} 

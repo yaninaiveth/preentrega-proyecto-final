@@ -20,7 +20,6 @@ h1{
     margin-top: 1em;
 }
 
-
 /* Estilos botones */
 
 .bot{
@@ -41,15 +40,10 @@ h1{
 
 /* Inicio estilo barra de navegación */
 
-.background{
-    background-color: #B7D164;
-}
-
 .flex{
     display: flex;
     justify-content: space-between;
 }
-
 
 
 /* Inicio estilo del archivo index.html */
@@ -149,9 +143,11 @@ h1{
     margin-bottom: 0.3em;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 968px){
     .contacto, .form{
         width: 70%;
         margin-left: 17%;
     }
 }
+
+

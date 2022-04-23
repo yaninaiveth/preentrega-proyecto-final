@@ -1,16 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views.generic import View, UpdateView, DeleteView,ListView
-from .forms import ProductCreateForms,ContactCreateForms
+from .forms import ProductCreateForms,ContactCreateForms, UserRegisterForm, UserEditForm 
 from .models import Cliente,Producto,Pedido,Contacto
 from django.urls import reverse_lazy
-
-#importar para registrar usuario (AGREGAR EN VERSION FINAL!!)
-from app.forms import UserRegisterForm      # SUMAR A LOS MODULOS YA CARGADOS DE NUESTRO "forms.py" (VER ARRIBA!)
 
 #LO QUE SE NECESITA AGREGAR PARA EL LOGIN/LOGOUT
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -182,7 +181,37 @@ def register(request):
         
         return render(request,'registro.html',{'form':form})
 
+# Vista de editar el perfil
+@login_required
+def EditProfile(request):
 
+    usuario = request.user
+
+    if request.method == 'POST':
+
+       form = UserEditForm(request.POST)
+
+       if form.is_valid():
+
+            informacion = form.cleaned_data
+
+            usuario.email = informacion['email']
+            usuario.password1 = informacion['password1']
+            usuario.password2 = informacion['password2']
+            usuario.last_name = informacion['last_name']
+            usuario.first_name = informacion['first_name']
+
+            usuario.save()
+
+            return render(request, "index.html")
+
+    else:
+
+        form = UserEditForm(initial={'email': usuario.email})
+
+    return render(request, "editar_perfil.html", {"form": form, "usuario": usuario})
+
+#------------------------------------------------------------------------------
 
 # vista de función (def) - Vista de Nosotros, información sobre la tienda
 def AboutUsView(request):

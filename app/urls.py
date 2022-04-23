@@ -19,11 +19,11 @@ urlpatterns = [
     path('contacto/',ContactCreateView.as_view(),name="contacto"),
     path('<int:pk>/modificar/',ProductUpdateView.as_view(),name="modificar_producto"),
     path('<int:pk>/delete/',ProductDeleteView.as_view(),name="borrar_producto"),
-    #-------------------------------------------AGREGADOS PARA LA VERSION FINAL----------------------------------------------------------------------------
-    path('login',login_request,name="login"),                                   # VISTA QUE SE AGREGA PARA LOGUEARSE A LA WEB!!
-    path('registro',register,name="registro"),                                  # VISTA QUE SE AGREGA PARA REGISTRARSE EN LA WEB!!    
-    path('logout',LogoutView.as_view(),name="logout"),                          # VISTA QUE SE AGREGA PARA DESLOGUEARSE EN LA WEB!!    
-    path('nosotros/',AboutUsView,name="nosotros"),                              # VISTA SOBRE NOSOTROS
+    path('login',login_request,name="login"),                                   # VISTA QUE SE AGREGA PARA LOGUEARSE!!
+    path('registro',register,name="registro"),                                  # VISTA QUE SE AGREGA PARA REGISTRARSE!!    
+    path('editar_perfil', EditProfile,name="editar_perfil"),                   # VISTA QUE SE AGREGA PARA EDITAR PERFIL!!    
+    path('logout',LogoutView.as_view(),name="logout"),                          # VISTA QUE SE AGREGA PARA DESLOGUEARSE!!    
+    path('nosotros/',AboutUsView,name="nosotros"),                              # VISTA SOBRE NOSOTROS (EMPRESA)
+
     
 ]
-

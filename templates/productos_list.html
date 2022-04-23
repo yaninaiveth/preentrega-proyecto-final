@@ -4,7 +4,7 @@
     <h2 class="title-productList">LISTADO DE PRODUCTOS</h2>
 
     <div class="bot">
-        <button type="button" class="btn btn-success bot-prod"><a style="color: white; text-decoration: none" href="{%url 'app:crear_producto'%}">Crear nuevo producto</a></button>
+        <button type="button" class="btn btn-success bot-prod"><a style="color: white; text-decoration: none" href="{%url 'app:crear_producto'%}">Crear producto</a></button>
         <button type="button" class="btn btn-success bot-prod"><a style="color: white; text-decoration: none" href="{%url 'app:buscar_producto'%}">Buscar artículo</a></button>
     </div>
     
@@ -15,7 +15,7 @@
         <div class="card" style="width: 18rem; margin: 2em">
             <div class="card-body">
                 <div class="container-image">
-                    <img src="{{p.imagen.url}}" class="card-img-top" alt="{{p.articulo}}">
+                    <img src="{{p.imagen.url}}" style="width: 100%; height: 100%; object-fit: cover" class="card-img-top" alt="{{p.articulo}}">
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><p><b>Artículo:</b></p>{{p.articulo}} </li>

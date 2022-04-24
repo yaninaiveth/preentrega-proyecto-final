@@ -128,12 +128,12 @@ class ContactCreateView(View):
 
                 c, created = Contacto.objects.get_or_create(nombre=nombre,email=email,telefono=telefono,asunto=asunto,mensaje=mensaje)
                 c.save()
-                return redirect('app:contacto')
+                msg = {'mensaje': f'Gracias "{nombre}". Hemos recibido tu mensaje!!'}
+                return render(request,"resultado_contacto.html",msg)
 
         context = {
         }
         return render(request,'contacto.html',context)
-
 
 #------------------------------------------------------------------------------
 

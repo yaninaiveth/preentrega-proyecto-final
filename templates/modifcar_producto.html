@@ -1,16 +1,17 @@
 {% extends "padre.html" %}
+{% load crispy_forms_tags %}
 {% block loquecambia %}
     <form class="form" method="POST" enctype="multipart/form-data">
         {%csrf_token%}
-        Artículo: {{form.articulo}}
+        {{form.articulo|as_crispy_field }}
         <br>
-        Sección: {{form.seccion}}
+        {{form.seccion|as_crispy_field }}
         <br>
-        Descripción: {{form.descripcion}}
+        {{form.descripcion|as_crispy_field }}
         <br>
-        Precio: {{form.precio_unitario}}
+        {{form.precio_unitario|as_crispy_field }}
         <br>
-        Foto: {{form.imagen}}
+        {{form.imagen|as_crispy_field }}
         <br>
         <button type="submit" class="btn btn-success bot-prod crear">Modificar</button>
         <button type="submit" class="btn btn-success bot-prod crear"><a href="{% url 'app:productos' %}" style="color: white; text-decoration: none">Volver atrás</a></button>

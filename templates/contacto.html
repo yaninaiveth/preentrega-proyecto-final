@@ -4,15 +4,15 @@
 <div class="form-contacto">
     <form class="contacto" style="margin-top: 2rem;" method="POST">
         {%csrf_token%}
-        Nombre {{form.nombre}}
+        Nombre: {{form.nombre}}
         <br>
-        Email {{form.email}}
+        Email: {{form.email}}
         <br>
-        Teléfono {{form.telefono}}
+        Teléfono: {{form.telefono}}
         <br>
-        Asunto {{form.asunto}}
+        Asunto: {{form.asunto}}
         <br>
-        Mensaje {{form.mensaje}}
+        Mensaje: {{form.mensaje}}
         <br>
         <button type="submit" class="btn btn-success">Enviar</button>
     </form>

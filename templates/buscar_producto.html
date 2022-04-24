@@ -1,8 +1,9 @@
 {% extends "padre.html" %}
 {% load static %}
 {% block loquecambia %}
-<h3 style="margin-top: 1em; text-align: center;">BÚSQUEDA</h3>
-<div style="height: 59.1vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<h2 style="font-size: 3em; text-align: center; margin-top: 3em;">🔎</h2>
+<h3 style="text-align: center;"><strong>BÚSQUEDA</strong></h3>
+<div style="height: 38.1vh; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: -2em;">
     <form action="/app/producto_buscado/" method="GET" style="margin-left: 10px;">
         <input type="text" name="articulo">
         <input type="submit" value="Buscar" style="padding: 2px; border-radius: 5px; background-color: rgb(33,136,56);color: white;">

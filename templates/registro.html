@@ -1,12 +1,13 @@
 {% extends "padre.html" %}
+{% load crispy_forms_tags %}
 {% block loquecambia %}
-<div style="height: 64.4vh; display: flex; justify-content: center; align-items: center; margin: 1em 0 1em 0;">
+<div style="height: 64.4vh; display: flex; justify-content: center; align-items: center; margin: 2em 0 2.5em 0;">
     <form action="" method="POST" style="max-width: max-content; padding: 1em;">
         {% csrf_token %}
 
-        {{form.as_p}}
+        {{form|crispy}}
 
-        <button type="submit" class="btn btn-success">Registrarse</button>
+        <button type="submit" class="btn btn-success" style="width: 16em">Registrarse</button>
 
     </form>
 </div>
